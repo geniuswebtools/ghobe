@@ -60,7 +60,7 @@ class ghobe
     $HIja;
 
   const
-    Version = 0.1,
+    Version = '0.1.1',
     PoweredBy = "ghobe' Brute Force Blocker";
 
   public function __construct($brutes = null, $header = true)
@@ -93,7 +93,7 @@ class ghobe
 
   private function checkadmin()
   {
-    $admin = trim($_REQUEST['log'] . $_POST['log'] . $_GET['log']);
+    $admin = strtolower(trim($_REQUEST['log'] . $_POST['log'] . $_GET['log']));
     $this->admin = (strstr($admin, 'admin')) ? true : false;
   } // end checkadmin
 
