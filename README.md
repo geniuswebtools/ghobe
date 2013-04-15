@@ -11,3 +11,4 @@ http://www.wordfence.com/
 
 The WordFence plugin will provide you with much better protection, and it will
 tell you the `brutes` trying to hack their way in to your WordPress setup.
+

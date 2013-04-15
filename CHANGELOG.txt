@@ -1,0 +1,9 @@
+v.0.1.2
+- Check against any brute string case insensitive
+- Added change log
+
+v.0.1.1
+- Check against admin string case insensitive
+
+V. 0.1.0
+- Initial release

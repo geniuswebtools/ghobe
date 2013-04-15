@@ -60,7 +60,7 @@ class ghobe
     $HIja;
 
   const
-    Version = '0.1.1',
+    Version = '0.1.2',
     PoweredBy = "ghobe' Brute Force Blocker";
 
   public function __construct($brutes = null, $header = true)
@@ -69,7 +69,7 @@ class ghobe
 
     $this->HIja = false;
     $this->bullies = 'adm aaa developer manager qwerty root support test user';
-    $this->brutes = array_flip(array_unique(explode(' ', trim($this->bullies . ' ' . $brutes))));
+    $this->brutes = array_flip(array_unique(explode(' ', strtolower(trim($this->bullies . ' ' . $brutes)))));
 
     $this->findbrute();
     $this->checkadmin();
@@ -88,7 +88,7 @@ class ghobe
     elseif(isset($_POST['log'])) { $brute = $_POST['log']; } // end if
     elseif(isset($_GET['log'])) { $brute = $_GET['log']; } // end if
 
-    $this->brute = $brute;
+    $this->brute = strtolower($brute);
   } // end findbrute
 
   private function checkadmin()
